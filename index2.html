@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms</title>
+	<style type="text/css">
+		.form{
+			vertical-align: top;
+			width: 170px;
+			padding: 0 5px;
+		}
+		.form, #tabledata{
+			display: inline-block;
+			margin-top:20px; 
+		}
+		#tabledata{
+			/*margin-left: 40px;*/
+		}
+		.emptyError{
+			color: red;
+		}
+		.locations{
+			border:1px solid black;
+			/*padding: 0 0 0 5px;*/
+			margin-right: 5px;
+			vertical-align: top;
+			text-align: center;
+			margin-top: 20px;
+			width: 100px;
+			display: inline-block;
+		}
+		#location{
+			border: 1px solid black;
+			min-height: 80px;
+			max-width: 200px;
+			cursor: pointer;
+		}
+
+		#location p{
+			font-size: small;
+		}
+		table, th, td{
+			border: 1px solid black;
+    		border-collapse: collapse;
+    		padding: 5px;
+		}
+
+		table input{
+			width: 80px;
+		}
+		.close{
+			vertical-align: top;
+		}
+
+		#location p{
+			display: inline-block;
+		}
+		select{
+			text-align: center;
+		}
+	</style>
+</head>
+<body onload="init()">
+	<div class="form">
+		<form id="form" name="form">
+			<label>First Name:</label><br>
+			<input type="text" name="fname">
+			<br>
+			<label>Last Name:</label><br>
+			<input type="text" name="lname">
+			<br>
+			<label>User Name:</label><br>
+			<input type="text" name="uname">
+			<br>
+			<label>Organisation:</label><br>
+			<input type="text" name="oname">
+			<br>
+			<label>Phone:</label><br>
+			<input type="text" name="phone">
+			<br>
+			<label>Interests:</label><br>
+			<input type="text" name="interests">
+			<br>
+			<label>Location:</label><br>
+			<div id="location"></div>
+			<br>
+			<label>Communication:</label><br>
+			<input type="text" name="communication">
+			<br>
+			<label>Permanent:</label><br>
+			<input type="text" name="permanent">
+			<br>
+			<br>
+			<input type="button" name="register" value="Register" id="register">
+		</form>
+	</div>
+	<div class='locations'>
+		<h4>Locations</h4>
+		<div class="drag_loc" id="loc1" draggable="true"><p class="loc1" id="loc1_loc">Riverside</p></div>
+		<div class="drag_loc" id="loc2" draggable="true"><p class="loc2" id="loc2_loc">New York</p></div>
+		<div class="drag_loc" id="loc3" draggable="true"><p class="loc3" id="loc3_loc">Boston</p></div>	
+	</div>
+	<div id="tabledata">
+		
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
